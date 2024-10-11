@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hlxsc3y9x-java-quarkus-gitops
+  description: This is GitOps manifest for hlxsc3y9x-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: hlxsc3y9x-java-quarkus
+    janus-idp.io/tekton: hlxsc3y9x-java-quarkus
+    backstage.io/kubernetes-id: hlxsc3y9x-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hlxsc3y9x-java-quarkus
